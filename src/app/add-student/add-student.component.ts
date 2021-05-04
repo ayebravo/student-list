@@ -21,12 +21,13 @@ export class AddStudentComponent implements OnInit {
   }
 
   studentName = "";
+  degreeProgram = "";
 
   addStudent() {
     //this.router.navigateByUrl("/");
     this.studentsDataSvc.addStudent({
       name: this.studentName,
-      degreeProgram: "Unknown"
+      degreeProgram: this.degreeProgram
     });
 
     this.location.back(); // This acts as pressing the backward button in the browser
